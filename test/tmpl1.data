@@ -1,0 +1,1 @@
+wow " <? console.log('super') ?> <?= "captain" ?> <?= 2+3 ?> prout

@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+/*!
+ * node-tmpl
+ * Copyright(c) 2010 Jerome Etienne <jetienne@jetienne.com>
+ * MIT Licensed
+ */
+
+require('node-tmpl').parse(process.argv.slice(2));
