@@ -3,8 +3,11 @@ basic templating system in node.js
 * This is based on php shorttag/longtag
 * super simple and immediatly understandable
 
+### To install
 
+npm install node-tmpl
 
+### example
 
 <? console.log("wow") ?>
 
