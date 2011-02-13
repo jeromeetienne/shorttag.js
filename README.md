@@ -1,5 +1,10 @@
 basic templating system in node.js
 
+* This is based on php shorttag/longtag
+* super simple and immediatly understandable
+
+
+
 
 <? console.log("wow") ?>
 
@@ -8,4 +13,4 @@ basic templating system in node.js
 
 ### TODO
 
-* TODO support <?node console.log("wow") ?>
+* TODO support longtag <?node console.log("wow") ?>
