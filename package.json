@@ -1,0 +1,9 @@
+{
+	"name"		: "node-tmpl",
+	"description"	: "A template engine inpired from shorttag",
+	"version"	: "0.0.1",
+	"author"	: "Jerome Etienne <jerome.etienne@gmail.com>",
+	"keywords"	: ["template"],
+	"directories"	: { "lib": "./lib/node-tmpl" },
+	"bin"		: { "node-tmpl": "./bin/node-tmpl" }
+}
