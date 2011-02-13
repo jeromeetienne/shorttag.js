@@ -12,5 +12,8 @@ install:
 uninstall:
 	rm -f $(PREFIX)/bin/$(PROJECT_NAME)
 	rm -fr ~/.node_libraries/$(PROJECT_NAME)
+
+publish:
+	npm publish
 	
 .PHONY: install uninstall test
