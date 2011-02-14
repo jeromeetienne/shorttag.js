@@ -1,6 +1,8 @@
-basic templating system in node.js
+# node-tmpl
 
-* This is based on php shorttag/longtag
+This is a basic templating system in node.js
+
+* based on php shorttag/longtag
 * *super simple* and *immediatly understandable*
 
 ### To install
