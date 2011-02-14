@@ -9,10 +9,15 @@ npm install node-tmpl
 
 ### example
 
-<? console.log("wow") ?>
+Suppose you get the template being
 
-<?= "wow" ?>
+> Let do an addition <?= 1+5 ?>
+> isnt that <? console.log("super") ?>?
 
+The result gonna be
+
+> Let do an addition 6
+> isnt that super?
 
 ### TODO
 
