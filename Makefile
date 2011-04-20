@@ -2,7 +2,7 @@ PREFIX		= /usr/local
 PROJECT_NAME	= node-tmpl
 
 test:
-	@NODE_PATH=$NODE_PATH:./lib/ bin/node-tmpl test/tmpl1.data
+	@NODE_PATH=$NODE_PATH:./lib/ bin/node-tmpl test/tmpl4.data
 
 install:
 	mkdir -p ~/.node_libraries
