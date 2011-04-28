@@ -40,7 +40,7 @@ var readStdin	= function(callback){
 
 // read data from process.stdin firt
 readStdin(function(stdinData){
-	console.log("read from stdin", stdinData);
+	//console.log("read from stdin", stdinData);
 	// initiate the template with stdin data
 	var tmpl	= stdinData;
 	// read and append all files from the cmline
@@ -49,5 +49,6 @@ readStdin(function(stdinData){
 		tmpl	+= require('fs').readFileSync(filename).toString()
 	}
 	// process the template
-	require('shorttagjs').process(tmpl);
+	var output	= require('shorttag').process(tmpl);
+	console.log(output)
 })

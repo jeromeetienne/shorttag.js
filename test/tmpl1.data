@@ -1,2 +1,5 @@
-wow " " <? console.log('super') ?> <?= "captain" ?>
+wow " "
+	<? if(true){ ?>
+		<?= "captain" ?>
+	<? } ?>
 <?= 2+3 ?> prout
