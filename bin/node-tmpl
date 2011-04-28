@@ -5,4 +5,50 @@
  * Copyright(c) 2010 Jerome Etienne <jetienne@jetienne.com>
  * MIT Licensed
  */
-require('node-tmpl').processFile(process.argv[2]);
+
+
+var tty	= require('tty');
+//
+//console.log("stding");
+//console.dir(process.stdin.fd)
+//console.log("stdin isatty", require('tty').isatty(process.stdin.fd));
+//require('tty').isatty(process.stdin.fd)
+
+
+
+var readStdin	= function(callback){
+	// check if stdin is a tty or not
+	var isatty	= require('tty').isatty(process.stdin.fd);
+	// if stdin isatty, dont read it
+	if( isatty ){
+		callback('');
+		return;
+	}
+	// read the whole stdin and notify callback(stdinData)
+	process.stdin.resume();
+	process.stdin.setEncoding('utf8');
+	var stdinData	= ''	
+	process.stdin.on('data', function(chunk){
+		stdinData	+= chunk;
+	});
+	process.stdin.on('end', function(){
+		callback(stdinData);
+	});
+}
+
+readStdin(function(stdinData){
+	console.log("read from stdin", stdinData);
+	var tmpl	= stdinData;
+//console.log("tmpl", tmpl)
+//process.exit();
+	for( var i = 2; i < process.argv.length; i++ ){
+		var filename	= process.argv[i];
+		tmpl	+= require('fs').readFileSync(filename).toString()
+	}
+console.log("tmpl", tmpl)
+console.log("999999999999999999999")
+	require('node-tmpl').processTmpl(tmpl);
+})
+//process.exit();
+//
+//require('node-tmpl').processFile(process.argv[2]);
