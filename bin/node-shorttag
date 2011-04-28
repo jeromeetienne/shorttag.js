@@ -49,6 +49,6 @@ readStdin(function(stdinData){
 		tmpl	+= require('fs').readFileSync(filename).toString()
 	}
 	// process the template
-	var output	= require('shorttag').process(tmpl);
+	var output	= require('../lib/shorttag').process(tmpl);
 	console.log(output)
 })
