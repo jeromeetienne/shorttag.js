@@ -1,19 +1,7 @@
-PREFIX		= /usr/local
-PROJECT_NAME	= node-tmpl
+PROJECT_NAME	= shorttag.js
 
 test:
-	@NODE_PATH=$NODE_PATH:./lib/ bin/node-tmpl test/tmpl1.data
-
-install:
-	mkdir -p ~/.node_libraries
-	cp -f bin/$(PROJECT_NAME) $(PREFIX)/bin/$(PROJECT_NAME)
-	cp -fr lib/$(PROJECT_NAME) ~/.node_libraries/$(PROJECT_NAME)
-
-uninstall:
-	rm -f $(PREFIX)/bin/$(PROJECT_NAME)
-	rm -fr ~/.node_libraries/$(PROJECT_NAME)
+	@NODE_PATH=$NODE_PATH:./lib/ bin/node-shorttag test/tmpl1.data
 
 publish:
 	npm publish
-	
-.PHONY: install uninstall test

@@ -1,8 +1,8 @@
 {
-	"name"		: "node-tmpl",
-	"description"	: "A template engine inpired from shorttag",
-	"version"	: "0.0.1",
+	"name"		: "shorttag",
+	"description"	: "Javascript template engine in 20-lines",
+	"version"	: "0.9",
 	"author"	: "Jerome Etienne <jerome.etienne@gmail.com>",
 	"keywords"	: ["template"],
-	"bin"		: { "node-tmpl": "./bin/node-tmpl" }
+	"bin"		: { "node-shorttag": "./bin/node-shorttag" }
 }
